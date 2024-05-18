@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1 class="title">Pokemon Search App</h1>
+  <div class="break"></div>
+  <div class="app" id="app">
+    <div class="search-section">
+      <h3>Search for Pokemon Name or ID:</h3>
+      <div class="search-bar">
+        <input type="text" id="search-input">
+        <button id="search-button">Search</button>
+      </div>
+    </div>
+    <div class="pokemon-display">
+      <img id="pokemon-img" src="" alt="">
+      <div class="poke-info">
+        <div class="poke-name"><span id="pokemon-name"></span> <span id="pokemon-id"></span></div>
+        <div><span id="weight"></span> <span id="height"></span></div>
+      </div>
+      <div class="poke-types" id="types">
+        
+      </div>
+    </div>
+    <div class="pokemon-stats">
+      
+      <div class="row">
+        <div class="big block"><strong>Base</strong></div>
+        <div class="small block"><Strong>Stats</Strong></div>
+      </div>
+      <div class="row">
+        <div class="big block">HP:</div>
+        <div class="small block" id="hp"></div>
+      </div>
+      <div class="row">
+        <div class="big block">Attack:</div>
+        <div class="small block" id="attack"></div>
+      </div>
+      <div class="row">
+        <div class="big block">Defense:</div>
+        <div class="small block" id="defense"></div>
+      </div>
+      <div class="row">
+        <div class="big block">Sp. Attack:</div>
+        <div class="small block" id="special-attack"></div>
+      </div>
+      <div class="row">
+        <div class="big block">Sp. Defense:</div>
+        <div class="small block" id="special-defense"></div>
+      </div>
+      <div class="row">
+        <div class="big block">Speed:</div>
+        <div class="small block" id="speed"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
