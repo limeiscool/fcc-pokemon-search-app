@@ -40,7 +40,8 @@ const typeBoxMaker = (type) => {
 
   typeBox.style.backgroundColor = typeColor;
   typeBox.classList.add("type-box");
-  typeBox.textContent = type;
+  typeBox.key = type;
+  typeBox.textContent = type[0].toUpperCase() + type.slice(1);
   return typeBox;
 };
 
@@ -54,9 +55,9 @@ searchButton.addEventListener("click", () => {
       const pokemonData = data;
       console.log(pokemonData);
       pokeImg.src = pokemonData.sprites.front_default;
-      pokemonName.textContent =
-        pokemonData.name[0].toUpperCase() + pokemonData.name.slice(1);
-      pokemonId.textContent = pokemonData.id;
+      pokeImg.hidden = false;
+      pokemonName.textContent = pokemonData.name.toUpperCase();
+      pokemonId.textContent = `#${pokemonData.id}`.padStart(3, "0");
       weight.textContent = `Weight: ${pokemonData.weight}`;
       height.textContent = `Height: ${pokemonData.height}`;
       hp.textContent = pokemonData.stats[0].base_stat;
@@ -65,6 +66,8 @@ searchButton.addEventListener("click", () => {
       specialAttack.textContent = pokemonData.stats[3].base_stat;
       specialDefense.textContent = pokemonData.stats[4].base_stat;
       speed.textContent = pokemonData.stats[5].base_stat;
+
+      types.innerHTML = "";
 
       pokemonData.types.forEach((type) => {
         const typeBox = typeBoxMaker(type.type.name);

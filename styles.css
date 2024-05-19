@@ -47,8 +47,21 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  border: 1px solid black;
-  padding: 5px;
+  border-bottom: 3px dashed white;
+  border-right: 3px dashed white;
+  border-radius: 6px;
+  font-size: 15px;
+  padding: 13px;
+}
+
+.poke-name {
+  display: flex;
+  gap: 16px;
+}
+
+.height-weight {
+  display: flex;
+  gap: 12px;
 }
 
 .poke-types {
@@ -59,8 +72,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  border: 1px solid black;
-  padding: 12px 4px;
+  border-top: 3px dashed white;
+  padding: 12px 10px;
   gap: 8px;
   height: 40px;
 }
@@ -88,19 +101,28 @@ body {
   border-radius: 12px;
   padding: 6px 18px;
   height: 30px;
-  font-size: large;
+  font-size: 17px;
 }
 
 .big {
-  width: 275px;
+  width: 200px;
 }
 
 .small {
-  width: 100px;
+  width: 70px;
 }
 
 .type-box {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.poke-img {
+  aspect-ratio: 1/1;
+  height: 134px;
 }
